@@ -140,7 +140,6 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener
                 score += 0.5;
             }
 
-
             if(collision(bird,pipe))
                 gameOver = true;
         }
@@ -171,8 +170,9 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener
     public void keyPressed(KeyEvent e)
     {
         if(e.getKeyCode() == KeyEvent.VK_SPACE)
-        {
             velocityY = -9;
+        if(e.getKeyCode() == KeyEvent.VK_ENTER)
+        {
             if(gameOver)
             {
                 bird.y = birdY;
